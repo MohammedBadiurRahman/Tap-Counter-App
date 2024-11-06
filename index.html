@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Touch counter App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <center>
+      <h1>Touch counter App</h1>
+
+      <div id="tapcounter">
+        <input type="number" value="0" id="count" readonly />
+        <div id="buttons">
+          <button onclick="increment()" class="operator-btn">TAP</button>
+          <button onclick="decrement()">Decrease</button>
+          <button onclick="reset()" class="operator-btn">reset</button>
+        </div>
+      </div>
+    </center>
+
+    <script>
+      var x = 0;
+      function increment() {
+        x = x + 1;
+        document.getElementById("count").value = x;
+      }
+
+      function decrement() {
+        x = x - 1;
+        document.getElementById("count").value = x;
+      }
+
+      function reset() {
+        x = 0;
+        document.getElementById("count").value = x;
+      }
+    </script>
+  </body>
+</html>
